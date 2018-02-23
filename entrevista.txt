@@ -1,0 +1,37 @@
+Aspectos básicos para la entrevista Fullstack React Nisum
+
+Preguntas Básicas sobre React:
+1: Cuales son las diferencias entre crear componentes React con EC5 y EC6. Describe algunas  ventajas y desventajas de cada version de JavaScript con react.
+Posible Respuesta: Al utilizar EC5 es necesario usar el método React.createClass() con las propiedades getInitialState, getDefaultProps y los eventos definidos también como propiedades, por ejemplo _handleClick. Render también debe ser incluido como propiedad del objeto. 
+Otra diferencia importante es autobinding, en EC5 el autobinding se hace automáticamente por lo que no es necesario usar this.function.bind(this), ya que this se referirá siempre al objeto que es dueño del método, en cambio en EC6 this siempre se refiere al objeto global que es window, por lo tanto es necesario usar la sintaxis resaltada arriba.
+Otra diferencia es el constructor() con EC6. 
+2: Qué es el DOM virtual en React y cómo funciona.
+Posible Respuesta: 
+3: Cómo es el proceso que utilizas cuando vas a desplegar una aplicación en React en un servidor. Qué herramientas utilizas y cómo optimizas la aplicación. 
+Posible Respuesta:
+Los pilares son  Dependency Management, Linting, Style-checking, Transpilation, and Compilation, Minification, Source-Mapping.
+1.Build tools: Gulp, Watchify/Browserify, Broccoli, or Webpack ...
+ 2. Style linting - Jshint, Eslint, JSCS: Para asegurarse que el código fuente sigue un estilo y guía apropiados. 
+3.Dependency Management: paquetes de NPM, plugins de Webpack y compiladores como Babel que permiten instalar paquetes automáticamente con import o require. 
+4.Transpiladores como Babel para compilar de ES6 a ES5. 
+5.Compiladores: Incluir assets y procesar archivos CSS que puedan inyectar hojas y recursos externos en un archivo. 
+6.Minification and compression: Comprimir los archivos para que sean más pequeños en producción. 
+7.Source-mapping: Ver en qué línea del código fuente ocurre un error. 
+
+4. Explica los métodos lifecycle que ofrece React y cómo estos nos ayudan a mejorar el rendimiento y la lógica de las aplicaciones en React. 
+a. Los wills, es decir los que ocurren justo antes de que un evento ocurra: componentWillMount, componentWillReceiveProps(object nextProps), componentWillUnmount, componentWillUpdate(object nextProps, object nextState).
+b. Los did, los métodos que se llaman antes de que ocurra un evento: 
+componentDidMount,componentDidUpdate(object prevProps, object prevState), 
+c. Los should, son los que se ejecutan si ciertas condiciones se cumplen: 
+shouldComponentUpdate(object nextState, object nextProps),
+
+Prueba de Práctica:
+1: Primero quiero que me digas que hace falta en este código para que cuando haga click en el boton el span con el texto statefull cambie a color azul y que lo arregles. 
+https://codepen.io/juandata/pen/gvjPpo?editors=1010
+2: En este ejemplo puedes ver un formulario muy sencillo compuesto por un input tipo texto y un input tipo submit. En HTML los elementos formulario como input, textarea y select actualizan su estado basándose en la interacción del usuario. En react las mutaciones de los estados se ejecutan en la propiedad "state" de los componentes. 
+En este momento el formulario y los inputs están siendo controlados por la API del dom,  lo que quiero que hagas es que escribas el mismo ejemplo en react. Para esto es necesario que hagas que el estado del componente sea "the source of truth" del formulario, es decir que no sea la api del DOM sino el componente de react el que actualice lo que escribes en el input.
+Para esto debes utilizar el concepto "controlled components".  
+https://codepen.io/juandata/pen/KQBzXN
+
+
+Quiero que programes un "controlled component" en bas
