@@ -32,6 +32,6 @@ https://codepen.io/juandata/pen/gvjPpo?editors=1010
 En este momento el formulario y los inputs están siendo controlados por la API del dom,  lo que quiero que hagas es que escribas el mismo ejemplo en react. Para esto es necesario que hagas que el estado del componente sea "the source of truth" del formulario, es decir que no sea la api del DOM sino el componente de react el que actualice lo que escribes en el input.
 Para esto debes utilizar el concepto "controlled components".  
 https://codepen.io/juandata/pen/KQBzXN
-
-
-Quiero que programes un "controlled component" en bas
+Nuevos Links: 
+https://jsfiddle.net/juandata/wgmygwzp/1/
+https://jsfiddle.net/juandata/n5u2wwjg/33702/
